@@ -1,0 +1,28 @@
+aura-landing-page/
+│
+├── index.html                  
+│
+├── assets/                     
+│   ├── audio/                  
+│   │   ├── ambient-track-1.mp3
+│   │   └── ambient-track-2.mp3
+│   │
+│   └── img/                     
+│       ├── orb-hero       
+│       ├── orb-pequeña      
+│       └── equipo aura     
+│
+├── css/                        
+│   ├── bootstrap.min.css       
+│   └── styles.css              
+│
+└── js/                         # Lógica de JavaScript 
+    ├── app.js                  # Punto de entrada principal 
+    ├── modules/                # Módulos separados por responsabilidad
+    │   ├── neural-network.js   # Lógica del Canvas 
+    │   ├── audio-player.js     # Control del reproductor de música
+    │   ├── theme-switcher.js   # Lógica del modo claro/oscuro
+    │   └── form-handler.js     # Validación, sanitización y envío del formulario
+    │
+    └── config/                 # Configuraciones y constantes
+        └── colors.js           # Paleta de colores centralizada para el Canvas
