@@ -1,9 +1,256 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="AURA - Núcleo de Resonancia Biométrica. Tecnología adaptativa para potenciar la mente única."
+    />
+    <title>AURA | Núcleo de Resonancia Biométrica</title>
+
+    <!-- Enlace a estilos locales -->
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Fondo de Red Neuronal Interactiva -->
+    <canvas id="neural-bg"></canvas>
+
+    <!-- NAVBAR FIJO Y TRANSLÚCIDO -->
+    <header class="navbar-fixed">
+      <div class="nav-container">
+        <a href="#" class="logo">AURA</a>
+
+        <nav class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-controls">
+          <!-- Botón de Audio -->
+          <button
+            id="audio-toggle"
+            class="btn-icon"
+            aria-label="Reproducir música"
+            title="Reproducir Música"
+          >
+            <svg
+              id="speaker-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            >
+              <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+              <path
+                id="sound-waves"
+                d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"
+              ></path>
+            </svg>
+          </button>
+          <!-- Elemento de Audio Oculto -->
+          <audio id="bg-audio" loop>
+            <source
+              src="assets/audio/Notes_in_the_Margin.mp3"
+              type="audio/mpeg"
+            />
+            Tu navegador no soporta audio.
+          </audio>
+
+          <!-- Botón Tema Claro/Oscuro -->
+          <button id="theme-toggle" class="btn-icon" aria-label="Cambiar tema">
+            <svg
+              id="theme-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <!-- HERO SECTION -->
+      <section id="inicio" class="hero-section">
+        <div class="hero-content">
+          <div class="hero-image">
+            <!-- Orbe generado con CSS para no depender de imágenes externas -->
+            <div class="orb-placeholder"></div>
+          </div>
+          <div class="hero-text">
+            <h1>Resonancia <span class="highlight">adaptativa.</span></h1>
+            <h2>Tecnología biométrica para potenciar la mente única.</h2>
+            <a href="#sobre" class="btn-primary">DESCUBRE MÁS</a>
+            <div class="bg-watermark">AURA</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE NOSOTROS -->
+      <section id="sobre" class="section-container">
+        <div class="row align-center">
+          <div class="col-md-6">
+            <h2 class="section-title">¿Qué es AURA?</h2>
+            <p>
+              Nuestra aplicación nace como una solución tecnológica diseñada
+              para apoyar a personas que presentan dificultades para mantener la
+              concentración durante sus actividades académicas o laborales.
+              Mediante herramientas orientadas a la gestión del tiempo, el
+              fortalecimiento de la atención y el desarrollo de hábitos
+              productivos, la plataforma busca mejorar el rendimiento de sus
+              usuarios.
+            </p>
+            <p>
+              Nuestra tecnología utiliza algoritmos adaptativos que se
+              sincronizan con la actividad cerebral, ofreciendo experiencias
+              personalizadas para el aprendizaje, la creatividad y el bienestar.
+            </p>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="orb-small">
+              <div class="orb-text">AURA</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUESTRO EQUIPO -->
+      <section id="equipo" class="section-container">
+        <div class="row align-center flex-reverse">
+          <div class="col-md-6">
+            <div class="image-card">
+              <span class="card-tag">TEAM AURA // 0 ABIERTO A CAMBIOS</span>
+              <!-- Placeholder para imagen del equipo -->
+              <div
+                class="img-placeholder"
+                style="
+                  background: linear-gradient(45deg, #1e293b, #0f172a);
+                  height: 250px;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="section-title text-right">NUESTRO EQUIPO</h2>
+            <p class="text-right">
+              Somos un equipo interdisciplinario que trabaja en brindar una
+              solución a la deserción y dificultades asociadas a los patrones
+              cognitivos y potencien el aprendizaje personalizado.
+            </p>
+            <p class="text-right">
+              Con profesionales de distintos campos, construimos un núcleo
+              humano y técnico capaz de entender desafíos reales y traducirlos
+              en experiencias digitales con significado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS / RESONADORES -->
+      <section id="servicios" class="section-container">
+        <h2 class="section-title text-center">NUESTROS RESONADORES</h2>
+        <div class="grid-cards">
+          <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Core Neural</h3>
+            <p>
+              Resonador de base para potenciar la concentración, procesamiento
+              cognitivo en tiempo real y estado de flujo.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Creative Sync</h3>
+            <p>
+              Estimula la creatividad y la resolución de problemas complejos
+              mediante la modulación interactiva de ondas alfa.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Emotional Balance</h3>
+            <p>
+              Regulación emocional y reducción del estrés con biofeedback
+              dinámico mapeado directamente a la interfaz.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section-container">
+        <h2 class="section-title text-center">CONECTA CON AURA</h2>
+        <p class="text-center subtitle">
+          DÉJENOS SU MENSAJE. LE RESPONDEREMOS EN MENOS DE 24H.
+        </p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="name">NOMBRE</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Tu nombre"
+                required
+                maxlength="50"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="email">CORREO ELECTRÓNICO</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@dominio.com"
+                required
+                maxlength="100"
+              />
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <label for="message">MENSAJE</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="¿Cómo podemos ayudarte?"
+                required
+                maxlength="500"
+              ></textarea>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn-primary">ENVIAR</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 AURA Biometric Resonator Core. Todos los derechos
+        reservados.
+      </p>
+      <p class="footer-sub">
+        Neurodiversidad como motor de innovación e inclusión radical.
+      </p>
+    </footer>
+
+    <!-- Punto de entrada de la aplicación modular -->
+    <script type="module" src="js/app.js"></script>
+  </body>
 </html>
