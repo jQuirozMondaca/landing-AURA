@@ -1,4 +1,4 @@
-// Importación de módulos locales (Requiere servidor local por políticas CORS)
+// Importación de módulos locales
 import { initNeuralNetwork } from "./modules/neuronal-network.js";
 import { initAudioPlayer } from "./modules/audio-player.js";
 import { initThemeSwitcher } from "./modules/theme-switcher.js";
